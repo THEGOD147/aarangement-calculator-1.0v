@@ -17,7 +17,7 @@ if not st.session_state.intro:
             gif_bytes =f.read()
             gif_base64 = base64.b64encode(gif_bytes).decode()
 
-        html=       f"""
+       """ html=       f"""
                     <style>
                     .fullcreeen{{
                     position: fixed;
@@ -40,6 +40,7 @@ if not st.session_state.intro:
                       <img src="data:image/gif;base64,{gif_base64}"/>
                     </div>
                     """
+""""
         st.components.v1.html(html , height=800)
         time.sleep(3)
         st.session_state.intro = True
@@ -57,3 +58,4 @@ else:
     if st.session_state.page == 'dashboard':
 
          dashboard.show()
+
