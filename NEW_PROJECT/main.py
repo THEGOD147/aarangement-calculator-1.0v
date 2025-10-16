@@ -3,7 +3,7 @@ from custom_pages import login_page as login
 from custom_pages import dashboard
 import time
 import base64
-
+"""
 gif_path = "intro.gif"
 if "intro"not in st.session_state:
     st.session_state.intro = False
@@ -44,7 +44,7 @@ if not st.session_state.intro:
         time.sleep(3)
         st.session_state.intro = True
         st.rerun()
-        
+        """
     
 if 'auth' not in st.session_state:
     st.session_state.auth = False
@@ -55,4 +55,5 @@ if not st.session_state.auth:
     login.log()
 else:
     if st.session_state.page == 'dashboard':
+
          dashboard.show()
